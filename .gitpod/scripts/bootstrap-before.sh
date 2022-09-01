@@ -19,6 +19,9 @@ function configure_try_credentials() {
 touch /workspace/.arcrc
 [[ -n "${FIREFOX_PHABRICATOR_API_TOKEN-}" ]] && echo "{\"hosts\": {\"https://phabricator.services.mozilla.com/api/\": {\"token\": \"${FIREFOX_PHABRICATOR_API_TOKEN}\"}}}" > ~/.arcrc
 
+# -------------------
+touch /workspace/test.txt
+echo "This is a test." > ~/test.txt
 # Force the exit code here because the previous command could return a non-zero
 # exit code when there is no Phabricator token...
 exit 0
