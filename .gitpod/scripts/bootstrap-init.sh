@@ -23,11 +23,11 @@ curl https://hg.mozilla.org/mozilla-central/raw-file/default/python/mozboot/bin/
 python3 bootstrap.py --vcs=git --no-interactive
 
 # `git-cinnabar` says we should set this configuration flag.
-cd "$GITPOD_REPO_ROOT/mozilla-unified" || exit 2
-git config fetch.prune true
+# cd "$GITPOD_REPO_ROOT/mozilla-unified" || exit 2
+# git config fetch.prune true
 
 # Fetch new commits, if any.
-git pull
+# git pull
 
 # Build Firefox.
-./mach build
+# ./mach build

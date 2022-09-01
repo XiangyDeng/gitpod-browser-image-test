@@ -30,7 +30,7 @@ tasks:
       cd "$GITPOD_REPO_ROOT/mozilla-unified"
       echo "gitpod command"
       # Run Firefox
-      ./mach run
+      # ./mach run
 
 ports:
   # mochitest
