@@ -1,0 +1,5 @@
+# Use a .mozbuild location where it will be saved by Gitpod
+export MOZBUILD_STATE_PATH="/workspace/.mozbuild"
+
+# Add git-cinnabar to the PATH
+export PATH="$MOZBUILD_STATE_PATH/git-cinnabar:$PATH"
