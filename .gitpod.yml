@@ -6,34 +6,6 @@
 image: 
   file: .gitpod/Dockerfile
 
-tasks:
-  - name: bootstrap
-    before: |
-      # Everything below will be executed every time we open Gitpod (either any
-      # existing workspace OR a completely new one).
-      # Dockerfile test
-
-      # Configure `bash` for the user, and source the `bash` config. We do it
-      # here so that the current bash has the right envionment loaded, which
-      # will be useful for the init/command scripts below.
-      #cd "$GITPOD_REPO_ROOT"
-      #cp .bashrc.d/100-firefox-dev ~/.bashrc.d/
-      #echo "gitpod before"
-      #source ~/.bashrc.d/100-firefox-dev
-
-      #"$GITPOD_REPO_ROOT/.gitpod/scripts/bootstrap-before.sh"
-
-    init: |
-      # Everything below will be executed when we create a new workspace.
-      #echo "gitpod init"
-      #"$GITPOD_REPO_ROOT/.gitpod/scripts/bootstrap-init.sh"
-
-    command: |
-      #cd "$GITPOD_REPO_ROOT/mozilla-unified"
-      #echo "gitpod command"
-      #Run Firefox
-      #./mach run
-
 ports:
   # mochitest
   - port: 2828
