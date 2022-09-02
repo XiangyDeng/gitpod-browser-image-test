@@ -4,7 +4,7 @@
 # docker build -f .gitpod/Dockerfile -t willdurand/gitpod-firefox-dev .
 # ```
 image: 
-  file: gitpod/workspace-full-vnc
+  file: willdurand/gitpod-firefox-dev
 
 tasks:
   - name: bootstrap
