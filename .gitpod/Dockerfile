@@ -24,4 +24,5 @@ RUN sudo apt-get update && \
         uuid \
         xvfb \
         zip \
+        net-tools \
     && sudo rm -rf /var/lib/apt/lists/*
