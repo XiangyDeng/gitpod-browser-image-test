@@ -2,6 +2,7 @@ FROM gitpod/workspace-full-vnc
 
 USER gitpod
 
+## 配置环境
 RUN sudo apt-get update && \
     sudo apt-get install -y \
         build-essential \
@@ -26,3 +27,5 @@ RUN sudo apt-get update && \
         zip \
         net-tools \
     && sudo rm -rf /var/lib/apt/lists/*
+
+

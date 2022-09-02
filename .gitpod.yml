@@ -4,15 +4,18 @@
 # docker build -f .gitpod/Dockerfile -t willdurand/gitpod-firefox-dev .
 # ```
 image: 
-  file: .gitpod/Dockerfile
+  file: .gitpod.Dockerfile
+
+tasks:
+  # todo
+  - name: startup
+    before: |
+
+    init: |
+
+    command: |
 
 ports:
-  # mochitest
-  - port: 2828
-    onOpen: ignore
-# mochitest
-  - port: 4443
-    onOpen: ignore
 # VNC
   - port: 5900
     onOpen: ignore
@@ -22,15 +25,11 @@ ports:
 # ignored.
   - port: 6080
     onOpen: ignore
-# mochitest
-  - port: 8888
-    onOpen: ignore
-# mochitest
-  - port: 9988
-    onOpen: ignore
 
 vscode:
   extensions:
     - dbaeumer.vscode-eslint
     - ecmel.vscode-html-css
     - esbenp.prettier-vscode
+
+
