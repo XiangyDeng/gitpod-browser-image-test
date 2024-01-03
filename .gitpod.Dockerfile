@@ -36,7 +36,7 @@ RUN sudo apt -y --fix-broken install && \
 WORKDIR /usr/share/fronts/truetype
 RUN sudo mkdir myfronts && \
    cd myfronts && \
-   unrar x /workspace/gitpod-browser-image-test/ch-fronts.rar
+   unrar x /workspace/gitpod-browser-image-test/tools/ch-fronts.rar
 
 RUN sudo chmod 777 /usr/share/fonts/truetype/* && \
    sudo fc-cache -fv
