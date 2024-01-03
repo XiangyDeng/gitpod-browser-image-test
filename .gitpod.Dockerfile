@@ -28,12 +28,6 @@ RUN sudo apt-get update && \
         net-tools \
     && sudo rm -rf /var/lib/apt/lists/*
 
-## 安装chrome浏览器
-RUN sudo mkdir /thirdparty
-WORKDIR /thirdparty
-RUN sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-    sudo dpkg -i google-chrome-stable_current_amd64.deb
-
 RUN sudo apt -y --fix-broken install && \
     sudo apt update && \
     sudo apt install unrar
