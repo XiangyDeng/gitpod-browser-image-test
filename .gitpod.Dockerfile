@@ -34,6 +34,19 @@ WORKDIR /thirdparty
 RUN sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     sudo dpkg -i google-chrome-stable_current_amd64.deb
 
+RUN sudo apt -y --fix-broken install && \
+    sudo apt update && \
+    sudo apt install unrar
+
+WORKDIR /usr/share/fronts/truetype
+RUN sudo mkdir myfronts && \
+    cd myfronts && \
+    unrar x /workspace/gitpod-browser-image-test/ch-fronts.rar
+
+RUN sudo chmod 777 /usr/share/fonts/truetype/* && \
+    sudo fc-cache -fv
+
+
 ## 打开浏览器指令
 # ctrl + alt + t 打开终端
 # 执行 google-chrome
