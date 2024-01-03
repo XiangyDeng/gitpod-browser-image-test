@@ -29,21 +29,9 @@ RUN sudo apt-get update && \
     && sudo rm -rf /var/lib/apt/lists/*
 
 # linux 系统中文字体安装
-RUN sudo apt -y --fix-broken install && \
-    sudo apt update && \
-    sudo apt install unrar
+RUN sudo apt-get update && \
+    sudo apt-get -y install fonts-wqy-zenhei
 
-WORKDIR /usr/share/fronts/truetype
-RUN sudo mkdir myfronts
-RUN cd myfronts
-RUN ls /workspace/gitpod-browser-image-test
-RUN ls /workspace/gitpod-browser-image-test/tools
-RUN unrar x /workspace/gitpod-browser-image-test/tools/ch-fronts.rar
-
-RUN sudo chmod 777 /usr/share/fonts/truetype/* && \
-   sudo fc-cache -fv
-
-CMD ["google-chrome"]
 ## 打开浏览器指令
 # ctrl + alt + t 打开终端
 # 执行 google-chrome
